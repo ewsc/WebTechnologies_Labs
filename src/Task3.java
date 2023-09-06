@@ -13,12 +13,14 @@ public class Task3 {
     }
 
     public static void main(String[] args) {
-        System.out.print("Input h: ");
+        System.out.print("Input step size: ");
         Scanner scanner = new Scanner(System.in);
         int h = scanner.nextInt();
+        System.out.print("Input amount of steps: ");
+        int  amount = scanner.nextInt();
         System.out.println("||   x   ||    F(x)    ||");
-        int x = 1;
-        for (int i = 1; i < 10; i++) {
+        int x = 0;
+        for (int i = 0; i < amount + 1; i++) {
             System.out.print("||" + fillWitSpaces(String.valueOf(x), 7) + "||");
             double func = Math.tan(x);
             DecimalFormat numberFormat = new DecimalFormat("0.0000");
