@@ -1,12 +1,15 @@
 import java.util.Scanner;
 
 public class Task2 {
-    public static void main(String[] args) {
-        System.out.print("Input X: ");
+    public static int returnInput(char letter) {
+        System.out.print("Input " + letter + ": ");
         Scanner scanner = new Scanner(System.in);
-        int x = scanner.nextInt();
-        System.out.print("Input Y: ");
-        int y = scanner.nextInt();
+        return scanner.nextInt();
+    }
+
+    public static void main(String[] args) {
+       int x = returnInput('X');
+       int y = returnInput('Y');
         boolean result = false;
         if (x >= 0 && y >= 0) {
             if (x <= 4 && y <= 5) {
