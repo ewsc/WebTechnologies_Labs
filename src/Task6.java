@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Task6 {
     public static void main(String[] args) {
-        int[] arraychik = fillArray(inputSize());
+        double[] arraychik = fillArray(inputSize());
         escapeMatrix(arraychik);
     }
 
@@ -12,8 +12,8 @@ public class Task6 {
         return scanner.nextInt();
     }
 
-   public static int[] fillArray(int size) {
-       int [] arraychik = new int[size];
+   public static double[] fillArray(int size) {
+       double [] arraychik = new double[size];
        Scanner scanner = new Scanner(System.in);
         for (int i = 0 ; i < size; i++) {
             System.out.print("Input array's " + i + " element: ");
@@ -23,7 +23,7 @@ public class Task6 {
         return arraychik;
    }
 
-    public static void escapeMatrix(int[] mas){
+    public static void escapeMatrix(double[] mas){
         for (int i = 0; i < mas.length ; i++) {
             for (int j = i; j < mas.length;j++){
                 System.out.print(mas[j] + " ");
