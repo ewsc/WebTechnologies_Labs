@@ -19,7 +19,8 @@ public class Task8 {
     }
 
     public static void printIndexes(double[] array_uno, double[] array_dos) {
-        for (double v : array_dos) System.out.println(binarySearching(array_uno, 0, array_uno.length - 1, v));
+        for (double v : array_dos)
+            System.out.println(binarySearching(array_uno, 0, array_uno.length - 1, v));
     }
 
     public static double binarySearching(double[] arr, int leftBorder, int rightBorder, double sElem) {
@@ -43,7 +44,6 @@ public class Task8 {
     public static void main(String[] args) {
         System.out.println("Input Array №1");
         double[] arraychik_one = fillArray(inputSize());
-        System.out.println();
         System.out.println("Input Array №2");
         double[] arraychik_two = fillArray(inputSize());
         printIndexes(arraychik_one, arraychik_two);
