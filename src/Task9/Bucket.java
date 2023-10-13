@@ -1,4 +1,4 @@
-package by.bsuir.lab1.task9.logic;
+package Task9;
 
 import java.awt.*;
 import java.util.ArrayList;
