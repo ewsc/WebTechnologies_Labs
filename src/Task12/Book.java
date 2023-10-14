@@ -25,6 +25,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Title:" + title + "|Author:" + author + "|Price:" + price + "|Edition:" + edition;
+        return "Title: " + title + " | Author: " + author + " | Price: " + price + " | Edition: " + edition;
     }
 }
