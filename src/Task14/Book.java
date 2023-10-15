@@ -1,0 +1,40 @@
+package Task14;
+
+public class Book {
+    private String title;
+    private String author;
+    private int price;
+    private static int edition;
+
+    @Override
+    public int hashCode() {
+        return 11 * title.hashCode() + 31 * author.hashCode() + Integer.valueOf(price).hashCode() * 113 + 20456;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Book)) {
+            return false;
+        }
+        if (obj.hashCode() != hashCode()) {
+            return false;
+        }
+        Book book = (Book) obj;
+        return this.title.equals(book.title) && this.author.equals(book.author) && this.price == book.price;
+    }
+
+    @Override
+    public Object clone() {
+        Book clonedBook = new Book();
+        clonedBook.author = author;
+        clonedBook.title = title;
+        clonedBook.price = price;
+        clonedBook.edition = edition;
+        return clonedBook;
+    }
+
+    @Override
+    public String toString() {
+        return "Title: " + title + " | Author: " + author + " | Price: " + price + " | Edition: " + edition;
+    }
+}
