@@ -1,8 +1,8 @@
-package Task16;
+package xyz.alamov.Task16;
 
-import Task16.comparator.AuthorComparator;
-import Task16.comparator.PriceComparator;
-import Task16.comparator.TitleComparator;
+import xyz.alamov.Task16.comparator.AuthorComparator;
+import xyz.alamov.Task16.comparator.PriceComparator;
+import xyz.alamov.Task16.comparator.TitleComparator;
 
 import java.util.ArrayList;
 import java.util.Comparator;

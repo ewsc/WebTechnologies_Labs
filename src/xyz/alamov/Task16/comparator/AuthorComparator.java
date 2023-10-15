@@ -1,6 +1,6 @@
-package Task16.comparator;
+package xyz.alamov.Task16.comparator;
 
-import Task16.Book;
+import xyz.alamov.Task16.Book;
 
 import java.util.Comparator;
 

@@ -1,4 +1,4 @@
-package Task9;
+package xyz.alamov.Task9;
 
 import java.awt.*;
 

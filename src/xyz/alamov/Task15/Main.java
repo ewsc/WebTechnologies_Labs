@@ -1,4 +1,4 @@
-package Task15;
+package xyz.alamov.Task15;
 
 import java.util.Arrays;
 

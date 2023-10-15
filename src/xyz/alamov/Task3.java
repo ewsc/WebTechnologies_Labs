@@ -1,3 +1,5 @@
+package xyz.alamov;
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 

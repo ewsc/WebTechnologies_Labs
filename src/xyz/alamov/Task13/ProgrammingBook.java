@@ -1,4 +1,4 @@
-package Task13;
+package xyz.alamov.Task13;
 
 import java.util.Objects;
 

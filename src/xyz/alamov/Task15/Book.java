@@ -1,4 +1,4 @@
-package Task15;
+package xyz.alamov.Task15;
 
 public class Book implements Comparable<Book> {
     private String title;

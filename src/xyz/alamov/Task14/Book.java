@@ -1,4 +1,4 @@
-package Task14;
+package xyz.alamov.Task14;
 
 public class Book {
     private String title;
