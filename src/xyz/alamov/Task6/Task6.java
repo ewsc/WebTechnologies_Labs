@@ -1,11 +1,12 @@
 package xyz.alamov.Task6;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task6 {
     public static void main(String[] args) {
         double[] arraychik = fillArray(inputSize());
-        escapeMatrix(arraychik);
+        System.out.println(Arrays.deepToString(escapeMatrix(arraychik)));
     }
 
     public static int inputSize() {
@@ -25,15 +26,22 @@ public class Task6 {
         return arraychik;
    }
 
-    public static void escapeMatrix(double[] mas){
-        for (int i = 0; i < mas.length ; i++) {
-            for (int j = i; j < mas.length;j++){
+    public static double[][] escapeMatrix(double[] mas){
+        double[][] testingMatrix = new double[mas.length][mas.length];
+        for (int i = 0; i < mas.length; i++) {
+            int localCounter = 0;
+            for (int j = i; j < mas.length; j++){
                 System.out.print(mas[j] + " ");
+                testingMatrix[i][localCounter] = mas[j];
+                localCounter++;
             }
             for (int k = 0; k < i; k++){
                 System.out.print(mas[k] + " ");
+                testingMatrix[i][localCounter] = mas[k];
+                localCounter++;
             }
             System.out.println();
         }
+        return testingMatrix;
     }
 }
