@@ -1,5 +1,6 @@
 package xyz.alamov.Task8;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Task8 {
@@ -20,9 +21,13 @@ public class Task8 {
         return arraychik;
     }
 
-    public static void printIndexes(double[] array_uno, double[] array_dos) {
-        for (double v : array_dos)
+    public static ArrayList<Double> printIndexes(double[] array_uno, double[] array_dos) {
+        ArrayList<Double> checkingList = new ArrayList<>();
+        for (double v : array_dos) {
+            checkingList.add(binarySearching(array_uno, 0, array_uno.length - 1, v));
             System.out.println(binarySearching(array_uno, 0, array_uno.length - 1, v));
+        }
+        return checkingList;
     }
 
     public static double binarySearching(double[] arr, int leftBorder, int rightBorder, double sElem) {
@@ -50,5 +55,4 @@ public class Task8 {
         double[] arraychik_two = fillArray(inputSize());
         printIndexes(arraychik_one, arraychik_two);
     }
-
 }
