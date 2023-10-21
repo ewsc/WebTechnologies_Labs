@@ -1,7 +1,6 @@
 package xyz.alamov.Task3;
 
 import org.junit.Test;
-import xyz.alamov.Task2.Task2;
 
 import static org.junit.Assert.assertTrue;
 
