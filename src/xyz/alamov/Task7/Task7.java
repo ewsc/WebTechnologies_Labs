@@ -15,13 +15,13 @@ public class Task7 {
         Scanner scanner = new Scanner(System.in);
         for (int i = 0 ; i < size; i++) {
             System.out.print("Input array's " + i + " element: ");
-            arraychik[i] = scanner.nextInt();
+            arraychik[i] = scanner.nextDouble();
         }
         System.out.println();
         return arraychik;
     }
 
-    public static void sortYourTrash(double[] array) {
+    public static double[] sortYourTrash(double[] array) {
         int h = 1;
         while (h*3 < array.length)
             h = h * 3 + 1;
@@ -30,6 +30,7 @@ public class Task7 {
             hhsort(array, h);
             h = h / 3;
         }
+        return array;
     }
 
     private static void hhsort(double[] array, int h) {
