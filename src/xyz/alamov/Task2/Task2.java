@@ -9,30 +9,33 @@ public class Task2 {
         return scanner.nextInt();
     }
 
-    public static void main(String[] args) {
-       int x = returnInput('X');
-       int y = returnInput('Y');
-        boolean result = false;
+    public static boolean getRegion(double x, double y) {
         if (x >= 0 && y >= 0) {
             if (x <= 4 && y <= 5) {
-                result = true;
+                return true;
             }
         }
         else if (x <= 0 && y >= 0) {
             if (x >= -4 && y <= 5) {
-                result = true;
+                return true;
             }
         }
         else if (x >= 0 && y <= 0) {
             if (x <= 6 && y >= -3) {
-                result = true;
+                return true;
             }
         }
         else if (x <= 0 && y <= 0) {
             if (x >= -6 && y >= -3) {
-                result = true;
+                return true;
             }
         }
-        System.out.println(result);
+        return false;
+    }
+
+    public static void main(String[] args) {
+       double x = returnInput('X');
+       double y = returnInput('Y');
+       System.out.println(getRegion(x, y));
     }
 }
