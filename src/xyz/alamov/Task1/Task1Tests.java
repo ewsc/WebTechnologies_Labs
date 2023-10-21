@@ -1,7 +1,8 @@
 package xyz.alamov.Task1;
 
 import org.junit.Test;
-import static org.junit.Assert.assertTrue;
+
+import static org.junit.Assert.assertEquals;
 
 public class Task1Tests {
     @Test
@@ -9,7 +10,6 @@ public class Task1Tests {
         double x = 0;
         double y = 0;
         double res = Task1.calc(x ,y);
-        boolean ok = Double.compare(res, 0.5) == 0;
-        assertTrue("failed", ok);
+        assertEquals("failed", 0, Double.compare(res, 0.5));
     }
 }
