@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Task4 {
     public static boolean checkForOptimusPrime(int value) {
         int i = 2;
-        boolean result = false;
+        boolean result = true;
         while (i <= value / 2) {
             if (value % i == 0) {
-                result = true;
+                result = false;
                 break;
             }
             ++i;
@@ -18,19 +18,26 @@ public class Task4 {
         return result;
     }
 
+    public static ArrayList<Integer> returnPositions(int[] arraychik) {
+        ArrayList<Integer> lastPrimeOnCybertron = new ArrayList<>();
+        for (int i = 0; i < arraychik.length; i++) {
+            if (checkForOptimusPrime(arraychik[i])) {
+                lastPrimeOnCybertron.add(i);
+            }
+        }
+        return lastPrimeOnCybertron;
+    }
+
     public static void main(String[] args) {
         System.out.print("Input array size: ");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] arraychik = new int[n];
-        ArrayList<Integer> lastPrimeOnCybertron = new ArrayList<>();
-        for (int i = 0 ; i < n; i++) {
+        for (int i = 0; i < arraychik.length; i++) {
             System.out.print("Input array's " + i + " element: ");
             arraychik[i] = scanner.nextInt();
-            if (!checkForOptimusPrime(arraychik[i])) {
-                lastPrimeOnCybertron.add(i);
-            }
         }
+        ArrayList<Integer> lastPrimeOnCybertron = returnPositions(arraychik);
         System.out.println("Your array: " + Arrays.toString(arraychik));
         if (lastPrimeOnCybertron.size() != 0) {
             System.out.print("Prime numbers in your array: [");
