@@ -1,7 +1,6 @@
 package xyz.alamov.Task3;
 
 import java.text.DecimalFormat;
-import java.util.Scanner;
 
 public class Task3 {
     public static String fillWitSpaces(String value, int maxLength) {
@@ -14,19 +13,19 @@ public class Task3 {
         return returningThis.toString();
     }
 
+    public static double returnFuncValue(double x) {
+        return Math.tan(x);
+    }
+
     public static void main(String[] args) {
-        System.out.print("Input step size: ");
-        Scanner scanner = new Scanner(System.in);
-        int h = scanner.nextInt();
-        System.out.print("Input amount of steps: ");
-        int  amount = scanner.nextInt();
-        System.out.println("||   x   ||    F(x)    ||");
-        int x = 0;
-        for (int i = 0; i < amount + 1; i++) {
-            System.out.print("||" + fillWitSpaces(String.valueOf(x), 7) + "||");
-            double func = Math.tan(x);
+        double a = -2;
+        double b = 2;
+        double h = 0.1;
+        System.out.println("||     x      ||    F(x)    ||");
+        for (double x = a; x <= b; x += h) {
             DecimalFormat numberFormat = new DecimalFormat("0.0000");
-            System.out.println("" + fillWitSpaces(numberFormat.format(func), 12) + "||");
+            System.out.print("||" + fillWitSpaces(numberFormat.format(x), 12) + "||");
+            System.out.println("" + fillWitSpaces(numberFormat.format(returnFuncValue(x)), 12) + "||");
             x = x + h;
         }
     }
