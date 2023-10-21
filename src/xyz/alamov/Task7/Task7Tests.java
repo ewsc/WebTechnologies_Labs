@@ -3,7 +3,6 @@ package xyz.alamov.Task7;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 import static org.junit.Assert.assertTrue;
 
