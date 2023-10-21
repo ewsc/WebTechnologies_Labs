@@ -21,5 +21,6 @@ public class Main {
         bucket.addBall(ball6);
 
         System.out.println(bucket.countBlue());
+        System.out.println(bucket.countWeight());
     }
 }
