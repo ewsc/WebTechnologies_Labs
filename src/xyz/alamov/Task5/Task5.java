@@ -60,6 +60,6 @@ public class Task5 {
                 length = Math.max(length, j);
             }
         }
-        return n-length;
+        return n-length-1;
     }
 }
