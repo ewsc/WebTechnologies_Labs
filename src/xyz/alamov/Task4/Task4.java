@@ -1,4 +1,4 @@
-package xyz.alamov;
+package xyz.alamov.Task4;
 
 import java.util.ArrayList;
 import java.util.Arrays;

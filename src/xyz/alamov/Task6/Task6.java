@@ -1,4 +1,4 @@
-package xyz.alamov;
+package xyz.alamov.Task6;
 
 import java.util.Scanner;
 

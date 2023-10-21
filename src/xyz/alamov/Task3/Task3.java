@@ -1,4 +1,4 @@
-package xyz.alamov;
+package xyz.alamov.Task3;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
