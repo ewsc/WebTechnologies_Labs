@@ -3,7 +3,6 @@ package xyz.alamov.Task16;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static junit.framework.TestCase.assertEquals;
