@@ -1,5 +1,7 @@
 package xyz.alamov.Task16;
 
+import java.util.Comparator;
+
 public class Book {
     private String title;
     private String author;
@@ -45,7 +47,15 @@ public class Book {
 
     @Override
     public String toString() {
-
         return "Title:" + title + "|Author:" + author + "|Price:" + price + "|Edition:" + edition;
     }
+
+    public static Comparator<Book> titleComparator = Comparator.comparing(Book::getTitle);
+    public static Comparator<Book> authorComparator = Comparator.comparing(Book::getAuthor);
+    public static Comparator<Book> priceComparator = Comparator.comparingInt(Book::getPrice);
+
+
+    public static Comparator<Book> authorTitleComparator = Comparator.comparing(Book::getAuthor).thenComparing(titleComparator);
+    public static Comparator<Book> titleAuthorComparator = Comparator.comparing(Book::getTitle).thenComparing(authorComparator);
+    public static Comparator<Book> authorTitlePriceComparator = authorComparator.thenComparing(titleComparator).thenComparing(priceComparator);
 }

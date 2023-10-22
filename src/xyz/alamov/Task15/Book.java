@@ -5,11 +5,23 @@ public class Book implements Comparable<Book> {
     private String author;
     private int price;
     private static int edition;
-    private int isbn;
+    private String isbn;
+    public Book(){}
 
-    public Book(String author, int isbn) {
+    public Book(String title, String author, int price, int edition, String isbn){
+        this.title = title;
         this.author = author;
+        this.price = price;
         this.isbn = isbn;
+        setEdition(edition);
+    }
+
+    public void setEdition(int edition) {
+        Book.edition = edition;
+    }
+
+    public String getIsbn() {
+        return isbn;
     }
 
     @Override
@@ -19,9 +31,7 @@ public class Book implements Comparable<Book> {
 
     @Override
     public boolean equals(Object obj){
-
         if (!(obj instanceof Book)) return false;
-
         Book book = (Book) obj;
         return this.title.equals(book.title) && this.author.equals(book.author) && this.price == book.price;
     }
@@ -33,6 +43,6 @@ public class Book implements Comparable<Book> {
 
     @Override
     public int compareTo(Book o) {
-        return this.isbn-o.isbn;
+        return this.isbn.compareTo(o.isbn);
     }
 }
