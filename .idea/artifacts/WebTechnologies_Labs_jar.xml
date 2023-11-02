@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="WebTechnologies_Labs:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/WebTechnologies_Labs_jar</output-path>
-    <root id="archive" name="WebTechnologies_Labs.jar">
-      <element id="module-output" name="WebTechnologies_Labs" />
-    </root>
-  </artifact>
-</component>
