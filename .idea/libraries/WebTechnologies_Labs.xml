@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="WebTechnologies_Labs">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/LabUno/out/artifacts/WebTechnologies_Labs_jar/WebTechnologies_Labs.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
