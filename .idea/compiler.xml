@@ -9,8 +9,5 @@
         <module name="Servachok" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Servachok" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
