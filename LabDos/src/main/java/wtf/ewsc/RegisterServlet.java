@@ -1,4 +1,4 @@
-package wtf.ewcs;
+package wtf.ewsc;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
