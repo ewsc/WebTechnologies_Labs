@@ -7,6 +7,11 @@
             <input type="text" class="uk-input" placeholder="username">
             <h5 class="uk-margin-small-bottom">password</h5>
             <input type="password" class="uk-input" placeholder="password">
+            <div class="uk-text-right uk-margin-top">
+                <button type="submit" class="uk-button uk-button-primary">
+                    Register
+                </button>
+            </div>
         </div>
     </div>
 </div>
