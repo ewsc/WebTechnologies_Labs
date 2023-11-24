@@ -1,38 +1,46 @@
 package wtf.ewsc;
 
+import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet("/CreateNewUserServlet")
-public class CreateNewUserServlet extends HttpServlet {
+@WebServlet("/CheckAuth")
+public class CheckAuth extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         String username = request.getParameter("username");
-        String name = request.getParameter("name");
         String password = request.getParameter("password");
         password = Hasher.returnHashed(password);
-
         try {
             Connection connection = DBConnection.getConnection();
-            String sql = "INSERT INTO users (name, username, password) VALUES (?, ?, ?)";
+            String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setString(1, name);
-            statement.setString(2, username);
-            statement.setString(3, password);
-            statement.executeUpdate();
+            statement.setString(1, username);
+            statement.setString(2, password);
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                HttpSession session = request.getSession();
+                session.setAttribute("username", username);
+                response.sendRedirect("/");
+            } else {
+                response.sendRedirect("/login?error=1");
+            }
+
+            resultSet.close();
             statement.close();
             connection.close();
-        } catch (SQLException | ClassNotFoundException ignored) {
-
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
-
-        response.sendRedirect("/");
     }
 }
