@@ -20,7 +20,10 @@
                     <input type="password" class="uk-input" placeholder="password" name="Password..." required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="20">
                 </label>
                 <div class="uk-text-right uk-margin-top">
-                    <button type="submit" class="uk-button uk-button-primary">
+                    <div>
+                        <a href="${pageContext.request.contextPath}/login" class="uk-link-heading">Already have the account? Sign in.</a>
+                    </div>
+                    <button type="submit" class="uk-button uk-button-primary uk-margin-top">
                         Register
                     </button>
                 </div>

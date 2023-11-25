@@ -15,9 +15,9 @@
                 </label>
                 <div class="uk-text-right uk-margin-top">
                     <div>
-                        <a href="${pageContext.request.contextPath}/register" class="uk-link-heading">First time here? Create and account.</a>
+                        <a href="${pageContext.request.contextPath}/register" class="uk-link-heading">First time here? Create an account.</a>
                     </div>
-                    <button type="submit" class="uk-button uk-button-primary uk-margin-small-top">
+                    <button type="submit" class="uk-button uk-button-primary uk-margin-top">
                         Login
                     </button>
                 </div>
