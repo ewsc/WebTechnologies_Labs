@@ -4,7 +4,7 @@
         <div class="uk-width-xlarge">
             <form action="${pageContext.request.contextPath}/CheckAuth" method="post">
                 <h4 class="uk-heading-line uk-text-center"><span>welcome back</span>!</h4>
-                <span class="uk-margin-small uk-text-danger uk-text-small">${error}</span>
+                <span class="uk-margin-small uk-text-center uk-text-danger uk-text-small">${error}</span>
                 <h5 class="uk-margin-small-bottom">username</h5>
                 <label>
                     <input type="text" class="uk-input" placeholder="username" name="username">
