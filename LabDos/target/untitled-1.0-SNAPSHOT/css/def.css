@@ -1,3 +1,11 @@
 html, body {
-    background: #a1beed !important;
+    background: rgb(248, 248, 248) !important;
+}
+
+.dark-bg {
+    background: #242424;
+}
+
+.text-light {
+    color: #f8f8f8;
 }
