@@ -14,7 +14,7 @@ import java.sql.SQLException;
 @WebServlet("/CreateBookingServlet")
 public class CreateNewBookingServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(false);
         String username = (String) session.getAttribute("username");
         String amount = request.getParameter("amount");
