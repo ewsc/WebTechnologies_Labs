@@ -1,6 +1,6 @@
 <jsp:include page="../layouts/default.jsp" />
 <div class="uk-container">
-    <div class="uk-position-center uk-padding uk-card-default">
+    <div class="uk-margin-large-top uk-padding uk-card-default">
         <div class="uk-width-xlarge">
             <form action="${pageContext.request.contextPath}/CheckAuth" method="post">
                 <h4 class="uk-heading-line uk-text-center"><span>Welcome back!</span></h4>
@@ -14,7 +14,10 @@
                     <input type="password" class="uk-input" placeholder="Password..." name="password">
                 </label>
                 <div class="uk-text-right uk-margin-top">
-                    <button type="submit" class="uk-button uk-button-primary">
+                    <div>
+                        <a href="${pageContext.request.contextPath}/register" class="uk-link-heading">First time here? Create and account.</a>
+                    </div>
+                    <button type="submit" class="uk-button uk-button-primary uk-margin-small-top">
                         Login
                     </button>
                 </div>

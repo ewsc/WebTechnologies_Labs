@@ -14,7 +14,10 @@
                     <input type="password" class="uk-input" placeholder="Password..." name="password">
                 </label>
                 <div class="uk-text-right uk-margin-top">
-                    <button type="submit" class="uk-button uk-button-primary">
+                    <div>
+                        <a href="${pageContext.request.contextPath}/register" class="uk-link-heading">First time here? Create an account.</a>
+                    </div>
+                    <button type="submit" class="uk-button uk-button-primary uk-margin-top">
                         Login
                     </button>
                 </div>
