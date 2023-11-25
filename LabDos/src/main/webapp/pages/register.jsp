@@ -1,6 +1,6 @@
 <jsp:include page="../layouts/default.jsp" />
 <div class="uk-container">
-    <div class="uk-position-center uk-padding uk-card-default">
+    <div class="uk-margin-large-top uk-padding uk-card-default">
         <div class="uk-width-xlarge">
             <h4 class="uk-heading-line uk-text-center"><span>Register for a booking!</span></h4>
             <form action="${pageContext.request.contextPath}/CreateNewUserServlet" method="post">

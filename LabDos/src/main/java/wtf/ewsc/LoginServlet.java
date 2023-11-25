@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -14,13 +15,19 @@ import java.util.Objects;
 public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String error = null;
-        if (Objects.equals(request.getParameter("error"), "1")) {
-            error = "Wrong username or password.";
+        HttpSession session = request.getSession(false);
+        if (session.getAttribute("username") != null) {
+            response.sendRedirect("/");;
         }
-        request.setAttribute("error", error);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("pages/login.jsp");
-        dispatcher.forward(request, response);
+        else {
+            String error = null;
+            if (Objects.equals(request.getParameter("error"), "1")) {
+                error = "Wrong username or password.";
+            }
+            request.setAttribute("error", error);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("pages/login.jsp");
+            dispatcher.forward(request, response);
+        }
     }
 }
 
