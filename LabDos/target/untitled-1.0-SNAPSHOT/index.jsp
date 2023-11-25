@@ -1,7 +1,8 @@
 <jsp:include page="layouts/default.jsp" />
 <div class="uk-container uk-margin-medium">
-    <h4 class="uk-heading-bullet uk-margin-remove-bottom">About Us</h4>
-    <p class="uk-text-default uk-text-emphasis">
+    <div class="uk-text-center"><img src="res/welcome.png" alt=""></div>
+    <h4 class="uk-heading-bullet  uk-margin-small-bottom">About Us</h4>
+    <p class="uk-text-default uk-text-emphasis uk-margin-remove-top">
         Welcome to Motel "Teploe Mesto", where comfort meets convenience! Our exceptional motel is the perfect choice for your next stay. Experience a delightful blend of modern amenities, impeccable service, and a prime location that will make your visit truly memorable.
         <br><br>
         At Motel "Teploe Mesto", we prioritize your comfort above all else. Our spacious and beautifully appointed rooms are designed with your relaxation in mind. Sink into plush beds with luxurious linens, unwind in front of the flat-screen TV, and stay connected with complimentary high-speed Wi-Fi. Whether you're traveling alone, with a partner, or as a family, we have room options to suit every need.

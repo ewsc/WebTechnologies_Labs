@@ -1,5 +1,6 @@
 <jsp:include page="layouts/default.jsp" />
 <div class="uk-container uk-margin-medium">
+    <div class="uk-text-center"><img src="res/welcome.png" alt=""></div>
     <h4 class="uk-heading-bullet  uk-margin-small-bottom">About Us</h4>
     <p class="uk-text-default uk-text-emphasis uk-margin-remove-top">
         Welcome to Motel "Teploe Mesto", where comfort meets convenience! Our exceptional motel is the perfect choice for your next stay. Experience a delightful blend of modern amenities, impeccable service, and a prime location that will make your visit truly memorable.
