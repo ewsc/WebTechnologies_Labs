@@ -1,6 +1,5 @@
 package wtf.ewsc;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @WebServlet("/CheckAuth")
-public class CheckAuth extends HttpServlet {
+public class CheckLoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
         String username = request.getParameter("username");

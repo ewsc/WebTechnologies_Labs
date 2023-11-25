@@ -1,7 +1,7 @@
 <jsp:include page="../layouts/default.jsp" />
 <div class="uk-container">
     <div class="uk-margin-large-top uk-padding uk-card-default">
-        <div class="uk-width-xlarge">
+        <div class="">
             <form action="${pageContext.request.contextPath}/CheckAuth" method="post">
                 <h4 class="uk-heading-line uk-text-center"><span>Welcome back!</span></h4>
                 <span class="uk-margin-small uk-text-center uk-text-danger uk-text-small">${error}</span>

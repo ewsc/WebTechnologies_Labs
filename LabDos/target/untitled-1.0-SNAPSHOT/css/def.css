@@ -1,8 +1,5 @@
 body {
     background: rgb(248, 248, 248) !important;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .dark-bg {

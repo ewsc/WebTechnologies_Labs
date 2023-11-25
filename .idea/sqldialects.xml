@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/LabDos/src/main/java/wtf/ewsc/CheckAuth.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/LabDos/src/main/java/wtf/ewsc/CheckLoginServlet.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/LabDos/src/main/java/wtf/ewsc/CreateNewBookingServlet.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/LabDos/src/main/java/wtf/ewsc/CreateNewUserServlet.java" dialect="GenericSQL" />
+    <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

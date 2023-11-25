@@ -24,6 +24,9 @@ public class LoginServlet extends HttpServlet {
             if (Objects.equals(request.getParameter("error"), "1")) {
                 error = "Wrong username or password.";
             }
+            else if (Objects.equals(request.getParameter("error"), "2")) {
+                error = "Log in to make bookings.";
+            }
             request.setAttribute("error", error);
             RequestDispatcher dispatcher = request.getRequestDispatcher("pages/login.jsp");
             dispatcher.forward(request, response);
