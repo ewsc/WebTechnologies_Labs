@@ -6,4 +6,24 @@ public class Booking {
     public String approved;
     public String booking_time;
     public int booking_amount;
+
+    public int getBooking_amount() {
+        return booking_amount;
+    }
+
+    public String getApproved() {
+        return approved;
+    }
+
+    public String getBooking_date() {
+        return booking_date;
+    }
+
+    public String getBooking_from() {
+        return booking_from;
+    }
+
+    public String getBooking_time() {
+        return booking_time;
+    }
 }

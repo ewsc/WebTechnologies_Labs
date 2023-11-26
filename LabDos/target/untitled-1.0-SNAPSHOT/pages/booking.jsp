@@ -1,5 +1,29 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>\
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <jsp:include page="../layouts/default.jsp" />
 <div class="uk-container uk-margin-medium">
+    <h4 class="uk-heading-bullet uk-margin-small-bottom">Make a reservation</h4>
+    <div class="uk-margin-bottom">
+        <c:forEach items="${resultList}" var="booking" varStatus="status">
+            <div class="uk-card uk-margin uk-card-default uk-card-body uk-card-small">
+                <h5 class="uk-text-bolder">Booking from <i><c:out value="${booking.booking_time}"/></i></h5>
+                <hr>
+                <div>
+                    Amount of guests: <c:out value="${booking.booking_amount}"/> • Booking date: <c:out value="${booking.booking_date}"/> •
+                    <c:if test="${booking.approved eq 1}">
+                        Status: <span class="uk-text-success uk-text-italic">Approved</span>
+                    </c:if>
+                    <c:if test="${booking.approved eq 0}">
+                        Status: <span class="uk-text-primary uk-text-italic">Pending review by administrator</span>
+                    </c:if>
+                    <c:if test="${booking.approved eq 2}">
+                       Status: <span class="uk-text-danger uk-text-italic">Not approved</span>
+                    </c:if>
+                </div>
+
+            </div>
+        </c:forEach>
+    </div>
     <h4 class="uk-heading-bullet uk-margin-small-bottom">Make a reservation</h4>
     <div class="uk-card uk-card-body uk-card-default">
         <form action="${pageContext.request.contextPath}/CreateBookingServlet" method="post">
