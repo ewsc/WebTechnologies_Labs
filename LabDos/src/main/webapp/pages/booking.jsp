@@ -9,19 +9,19 @@
                 <h5 class="uk-text-bolder uk-text-danger uk-text-italic uk-text-center">Looks like there is nothing to display...</h5>
             </div>
         </c:if>
-        <c:forEach items="${resultList}" var="booking" varStatus="status">
+        <c:forEach items="${resultList}" var="record" varStatus="status">
             <div class="uk-card uk-margin uk-card-default uk-card-body uk-card-small">
-                <h5 class="uk-text-bolder">Booking from <i><c:out value="${booking.booking_time}"/></i></h5>
+                <h5 class="uk-text-bolder">Booking from <i><c:out value="${record.booking_time}"/></i></h5>
                 <hr>
                 <div>
-                    Amount of guests: <i><c:out value="${booking.booking_amount}"/></i> • Booking date: <i><c:out value="${booking.booking_date}"/></i> •
-                    <c:if test="${booking.approved eq 1}">
+                    Amount of guests: <i><c:out value="${record.booking_amount}"/></i> • Booking date: <i><c:out value="${record.booking_date}"/></i> •
+                    <c:if test="${record.approved eq 1}">
                         Status: <span class="uk-text-success uk-text-italic">Approved</span>
                     </c:if>
-                    <c:if test="${booking.approved eq 0}">
+                    <c:if test="${record.approved eq 0}">
                         Status: <span class="uk-text-primary uk-text-italic">Pending review by administrator</span>
                     </c:if>
-                    <c:if test="${booking.approved eq 2}">
+                    <c:if test="${record.approved eq 2}">
                        Status: <span class="uk-text-danger uk-text-italic">Not approved</span>
                     </c:if>
                 </div>

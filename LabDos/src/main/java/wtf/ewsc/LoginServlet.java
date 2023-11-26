@@ -27,6 +27,9 @@ public class LoginServlet extends HttpServlet {
             else if (Objects.equals(request.getParameter("error"), "2")) {
                 error = "Log in to make bookings.";
             }
+            else if (Objects.equals(request.getParameter("error"), "3")) {
+                error = "Log in to make access admin panel.";
+            }
             request.setAttribute("error", error);
             RequestDispatcher dispatcher = request.getRequestDispatcher("pages/login.jsp");
             dispatcher.forward(request, response);

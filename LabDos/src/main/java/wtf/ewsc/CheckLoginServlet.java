@@ -30,6 +30,7 @@ public class CheckLoginServlet extends HttpServlet {
             if (resultSet.next()) {
                 HttpSession session = request.getSession();
                 session.setAttribute("username", username);
+                session.setAttribute("role", resultSet.getString("role"));
                 response.sendRedirect("/");
             } else {
                 response.sendRedirect("/login?error=1");
