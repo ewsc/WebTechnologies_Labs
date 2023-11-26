@@ -7,6 +7,12 @@ public class Booking {
     public String booking_time;
     public int booking_amount;
 
+    public int id;
+
+    public int getId() {
+        return id;
+    }
+
     public int getBooking_amount() {
         return booking_amount;
     }

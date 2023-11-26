@@ -36,6 +36,7 @@ public class ApanelServlet extends HttpServlet {
                     ArrayList<Booking> allBookings = new ArrayList<>();
                     while (resultSet.next()) {
                         Booking tempBooking = new Booking();
+                        tempBooking.id = Integer.parseInt(resultSet.getString("id"));
                         tempBooking.booking_date = resultSet.getString("booking_date");
                         tempBooking.booking_from = resultSet.getString("booking_from");
                         tempBooking.booking_amount = Integer.parseInt(resultSet.getString("booking_amount"));
