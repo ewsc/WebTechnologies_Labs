@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-@WebServlet("/CreateNewUserServlet")
+@WebServlet("/CreateNew")
 public class CreateNewUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
@@ -21,11 +21,12 @@ public class CreateNewUserServlet extends HttpServlet {
 
         try {
             Connection connection = DBConnection.getConnection();
-            String sql = "INSERT INTO users (name, username, password) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO users (name, username, password, role) VALUES (?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, name);
             statement.setString(2, username);
             statement.setString(3, password);
+            statement.setString(4, "0");
             statement.executeUpdate();
             statement.close();
             connection.close();

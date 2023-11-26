@@ -2,7 +2,7 @@
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <jsp:include page="../layouts/default.jsp" />
 <div class="uk-container uk-margin-medium">
-    <h4 class="uk-heading-bullet uk-margin-small-bottom">Make a reservation</h4>
+    <h4 class="uk-heading-bullet uk-margin-small-bottom">My bookings</h4>
     <div class="uk-margin-bottom">
         <c:forEach items="${resultList}" var="booking" varStatus="status">
             <div class="uk-card uk-margin uk-card-default uk-card-body uk-card-small">
