@@ -1,3 +1,4 @@
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <jsp:include page="layouts/default.jsp" />
 <div class="uk-container uk-margin-medium">
     <h4 class="uk-heading-bullet  uk-margin-small-bottom">About Us</h4>

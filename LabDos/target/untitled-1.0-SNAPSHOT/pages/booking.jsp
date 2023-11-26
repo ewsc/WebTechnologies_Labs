@@ -9,7 +9,7 @@
                 <h5 class="uk-text-bolder">Booking from <i><c:out value="${booking.booking_time}"/></i></h5>
                 <hr>
                 <div>
-                    Amount of guests: <c:out value="${booking.booking_amount}"/> • Booking date: <c:out value="${booking.booking_date}"/> •
+                    Amount of guests: <i><c:out value="${booking.booking_amount}"/></i> • Booking date: <i><c:out value="${booking.booking_date}"/></i> •
                     <c:if test="${booking.approved eq 1}">
                         Status: <span class="uk-text-success uk-text-italic">Approved</span>
                     </c:if>
