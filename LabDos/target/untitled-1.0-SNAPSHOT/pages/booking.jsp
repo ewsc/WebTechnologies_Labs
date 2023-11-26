@@ -1,9 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>\
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <jsp:include page="../layouts/default.jsp" />
-<div class="uk-container uk-margin-medium">
+<div class="uk-container uk-margin-medium uk-margin-large-bottom">
     <h4 class="uk-heading-bullet uk-margin-small-bottom">My bookings</h4>
     <div class="uk-margin-bottom">
+        <c:if test="${empty resultList}">
+            <div class="uk-card uk-margin uk-card-default uk-card-body uk-card-small">
+                <h5 class="uk-text-bolder uk-text-danger uk-text-italic uk-text-center">Looks like there is nothing to display...</h5>
+            </div>
+        </c:if>
         <c:forEach items="${resultList}" var="booking" varStatus="status">
             <div class="uk-card uk-margin uk-card-default uk-card-body uk-card-small">
                 <h5 class="uk-text-bolder">Booking from <i><c:out value="${booking.booking_time}"/></i></h5>
