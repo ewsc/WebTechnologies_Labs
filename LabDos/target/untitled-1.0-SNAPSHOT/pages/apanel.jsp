@@ -29,11 +29,13 @@
                     Set new status:
                     <form action="${pageContext.request.contextPath}/ChangeStatusServlet" method="post">
                         <input type="hidden" name="book_id" value="<c:out value="${record.id}"/>">
-                        <select name="approved" class="uk-select" onchange="this.form.submit()">
-                            <option value="" disabled selected>New status</option>
-                            <option value="1">Approved</option>SS
-                            <option value="2">Not approved</option>
-                        </select>
+                        <label>
+                            <select name="approved" class="uk-select" onchange="this.form.submit()">
+                                <option value="" disabled selected>New status</option>
+                                <option value="1">Approved</option>SS
+                                <option value="2">Not approved</option>
+                            </select>
+                        </label>
                     </form>
                 </div>
             </div>

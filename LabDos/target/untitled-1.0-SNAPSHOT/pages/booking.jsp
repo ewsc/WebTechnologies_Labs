@@ -18,7 +18,9 @@
                     <div class="uk-width-1-2 uk-text-right">
                         <div>
                             <a href="#delete-modal-<c:out value="${record.id}"/>" class="uk-icon-link" uk-icon="icon: trash; ratio: 1.5" uk-tooltip="Delete booking" uk-toggle></a>
-                            <a href="#" class="uk-icon-link uk-margin-left" uk-icon="icon: pencil; ratio: 1.5" uk-tooltip="Edit booking details"></a>
+                            <c:if test="${record.approved eq 0}">
+                                <a href="#edit-modal-<c:out value="${record.id}"/>" class="uk-icon-link uk-margin-left" uk-icon="icon: pencil; ratio: 1.5" uk-toggle uk-tooltip="Edit booking details"></a>
+                            </c:if>
                         </div>
                     </div>
                 </div>
@@ -39,13 +41,40 @@
 
             <div id="delete-modal-<c:out value="${record.id}"/>" class="uk-flex-top" uk-modal>
                 <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-
                     <button class="uk-modal-close-default" type="button" uk-close></button>
-
                     <p>Are you sure you want to delete your reservation?</p>
                     <form action="${pageContext.request.contextPath}/DeleteBookingServlet" method="post">
                         <input type="hidden" name="id" value="<c:out value="${record.id}"/>">
-                        <button type="submit" class="uk-button uk-button-danger uk-text-right">Delete</button>
+                        <div class="uk-text-right uk-margin-top">
+                            <button type="submit" class="uk-button uk-button-danger uk-text-right">Delete</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="edit-modal-<c:out value="${record.id}"/>" class="uk-flex-top" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                    <p>Update reservation details</p>
+                    <form action="${pageContext.request.contextPath}/UpdateBookingServlet" method="post">
+                        <input type="hidden" name="id" value="<c:out value="${record.id}"/>">
+                        <div class="uk-flex uk-flex-center uk-flex-middle">
+                            <div class="uk-width-1-2">
+                                <h5 class="uk-margin-small-bottom">Pick a date for reservation</h5>
+                                <label>
+                                    <input type="date" class="uk-input" required name="date">
+                                </label>
+                            </div>
+                            <div class="uk-margin-left uk-width-1-2">
+                                <h5 class="uk-margin-small-bottom">Amount of guests</h5>
+                                <label>
+                                    <input type="number" min="1" max="99" class="uk-input" required name="amount">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="uk-text-right uk-margin-top">
+                            <button type="submit" class="uk-button uk-button-primary uk-text-right">Update</button>
+                        </div>
                     </form>
                 </div>
             </div>
