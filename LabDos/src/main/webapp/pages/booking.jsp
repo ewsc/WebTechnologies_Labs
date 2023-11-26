@@ -14,6 +14,9 @@
                 <div class="uk-flex">
                     <div class="uk-width-1-2">
                         <h5 class="uk-text-bolder uk-margin-remove-bottom">Booking from <i><c:out value="${record.booking_time}"/></i></h5>
+                        <c:if test="${record.discount_percent > 0}">
+                            <h5 class="uk-text-bolder uk-margin-remove-bottom uk-margin-remove-top">Discount <i></i><c:out value="${record.discount_percent}"/>%</i></h5>
+                        </c:if>
                     </div>
                     <div class="uk-width-1-2 uk-text-right">
                         <div>

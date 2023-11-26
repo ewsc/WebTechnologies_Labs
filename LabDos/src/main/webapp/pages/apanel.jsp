@@ -11,7 +11,10 @@
         </c:if>
         <c:forEach items="${allBookings}" var="record" varStatus="recordStatus">
             <div class="uk-card uk-margin uk-card-default uk-card-body uk-card-small">
-                <h5 class="uk-text-bolder">Booking #<c:out value="${record.id}"/> from <i><c:out value="${record.booking_time}"/>, order by <i class="uk-text-bolder"><c:out value="${record.booking_from}"/></i></i></h5>
+                <h5 class="uk-text-bolder uk-margin-small-bottom">Booking #<c:out value="${record.id}"/> from <i><c:out value="${record.booking_time}"/>, order by <i class="uk-text-bolder"><c:out value="${record.booking_from}"/></i></i></h5>
+                <c:if test="${record.discount_percent > 0}">
+                    <h5 class="uk-text-bolder uk-margin-remove-top">Discount <i></i><c:out value="${record.discount_percent}"/>%</i></h5>
+                </c:if>
                 <hr>
                 <div>
                     Amount of guests: <i><c:out value="${record.booking_amount}"/></i> • Booking date: <i><c:out value="${record.booking_date}"/></i> •
@@ -34,6 +37,23 @@
                                 <option value="" disabled selected>New status</option>
                                 <option value="1">Approved</option>SS
                                 <option value="2">Not approved</option>
+                            </select>
+                        </label>
+                    </form>
+                </div>
+                <div class="uk-margin-top">
+                    Set discount, %
+                    <form action="${pageContext.request.contextPath}/ChangeDiscountServlet" method="post">
+                        <input type="hidden" name="book_id" value="<c:out value="${record.id}"/>">
+                        <label>
+                            <select name="discount" class="uk-select" onchange="this.form.submit()">
+                                <option value="" disabled selected>Set discount</option>
+                                <option value="0">0%</option>
+                                <option value="10">10%</option>
+                                <option value="20">20%</option>
+                                <option value="30">30%</option>
+                                <option value="40">40%</option>
+                                <option value="50">50%</option>
                             </select>
                         </label>
                     </form>

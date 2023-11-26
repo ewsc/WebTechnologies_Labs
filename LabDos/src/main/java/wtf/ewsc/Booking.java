@@ -7,7 +7,13 @@ public class Booking {
     public String booking_time;
     public int booking_amount;
 
+    public int discount_percent;
+
     public int id;
+
+    public int getDiscount_percent() {
+        return discount_percent;
+    }
 
     public int getId() {
         return id;

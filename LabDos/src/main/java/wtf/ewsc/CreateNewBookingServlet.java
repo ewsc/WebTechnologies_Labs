@@ -21,12 +21,13 @@ public class CreateNewBookingServlet extends HttpServlet {
         String date = request.getParameter("date");
         try {
             Connection connection = DBConnection.getConnection();
-            String sql = "INSERT INTO bookings (booking_from, booking_date, approved, booking_amount) VALUES (?, ?, ?, ?)";
+            String sql = "INSERT INTO bookings (booking_from, booking_date, approved, booking_amount, discount_percent) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, username);
             statement.setString(2, date);
             statement.setString(3, "0");
             statement.setString(4, amount);
+            statement.setString(5, "0");
             statement.executeUpdate();
             statement.close();
             connection.close();
