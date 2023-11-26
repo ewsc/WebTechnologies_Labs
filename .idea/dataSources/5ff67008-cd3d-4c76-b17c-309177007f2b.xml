@@ -1015,8 +1015,8 @@ sys|schema||mysql.sys||TRIGGER|G</Grants>
     </schema>
     <schema id="295" parent="1" name="wt-db">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-11-26.07:00:50</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-26.01:00:50</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-11-27.02:05:51</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-26.20:05:51</LocalIntrospectionTimestamp>
       <CollationName>utf16_general_ci</CollationName>
     </schema>
     <user id="296" parent="1" name="mysql.infoschema">
@@ -1041,7 +1041,7 @@ sys|schema||mysql.sys||TRIGGER|G</Grants>
       <CollationName>utf32_general_ci</CollationName>
     </table>
     <column id="302" parent="300" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1072,57 +1072,62 @@ sys|schema||mysql.sys||TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="308" parent="300" name="PRIMARY">
+    <column id="308" parent="300" name="discount_percent">
+      <DasType>tinyint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <index id="309" parent="300" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="309" parent="300" name="PRIMARY">
+    <key id="310" parent="300" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="310" parent="301" name="id">
+    <column id="311" parent="301" name="id">
       <AutoIncrement>5</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="311" parent="301" name="role">
+    <column id="312" parent="301" name="role">
       <DasType>tinyint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="312" parent="301" name="username">
+    <column id="313" parent="301" name="username">
       <DasType>tinytext|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <CollationName>utf16_general_ci</CollationName>
     </column>
-    <column id="313" parent="301" name="password">
+    <column id="314" parent="301" name="password">
       <DasType>tinytext|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <CollationName>utf16_general_ci</CollationName>
     </column>
-    <column id="314" parent="301" name="name">
+    <column id="315" parent="301" name="name">
       <DasType>tinytext|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <CollationName>utf16_general_ci</CollationName>
     </column>
-    <column id="315" parent="301" name="registered_at">
+    <column id="316" parent="301" name="registered_at">
       <DasType>timestamp|0s</DasType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="316" parent="301" name="PRIMARY">
+    <index id="317" parent="301" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="317" parent="301" name="PRIMARY">
+    <key id="318" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
