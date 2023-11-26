@@ -11,7 +11,17 @@
         </c:if>
         <c:forEach items="${resultList}" var="record" varStatus="status">
             <div class="uk-card uk-margin uk-card-default uk-card-body uk-card-small">
-                <h5 class="uk-text-bolder">Booking from <i><c:out value="${record.booking_time}"/></i></h5>
+                <div class="uk-flex">
+                    <div class="uk-width-1-2">
+                        <h5 class="uk-text-bolder uk-margin-remove-bottom">Booking from <i><c:out value="${record.booking_time}"/></i></h5>
+                    </div>
+                    <div class="uk-width-1-2 uk-text-right">
+                        <div>
+                            <a href="#delete-modal-<c:out value="${record.id}"/>" class="uk-icon-link" uk-icon="icon: trash; ratio: 1.5" uk-tooltip="Delete booking" uk-toggle></a>
+                            <a href="#" class="uk-icon-link uk-margin-left" uk-icon="icon: pencil; ratio: 1.5" uk-tooltip="Edit booking details"></a>
+                        </div>
+                    </div>
+                </div>
                 <hr>
                 <div>
                     Amount of guests: <i><c:out value="${record.booking_amount}"/></i> • Booking date: <i><c:out value="${record.booking_date}"/></i> •
@@ -25,7 +35,19 @@
                        Status: <span class="uk-text-danger uk-text-italic">Not approved</span>
                     </c:if>
                 </div>
+            </div>
 
+            <div id="delete-modal-<c:out value="${record.id}"/>" class="uk-flex-top" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                    <p>Are you sure you want to delete your reservation?</p>
+                    <form action="${pageContext.request.contextPath}/DeleteBookingServlet" method="post">
+                        <input type="hidden" name="id" value="<c:out value="${record.id}"/>">
+                        <button type="submit" class="uk-button uk-button-danger uk-text-right">Delete</button>
+                    </form>
+                </div>
             </div>
         </c:forEach>
     </div>

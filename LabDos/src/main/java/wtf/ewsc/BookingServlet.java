@@ -36,6 +36,7 @@ public class BookingServlet extends HttpServlet {
                 while (resultSet.next()) {
                     Booking tempBooking = new Booking();
                     tempBooking.booking_date = resultSet.getString("booking_date");
+                    tempBooking.id = Integer.parseInt(resultSet.getString("id"));
                     tempBooking.booking_from = resultSet.getString("booking_from");
                     tempBooking.booking_amount = Integer.parseInt(resultSet.getString("booking_amount"));
                     tempBooking.booking_time = resultSet.getString("booking_time");
